@@ -20,7 +20,7 @@
         {icon: faGithub, color: "text-gray-800"}
     ];
 
-    const Projects = [
+    const projects = [
         {title: "Password Generator", description: "Password generator ", photo: "/PasswordGenerator.png", link: "https://alejandroricogar.github.io/password-generator.github.io/"},
         {title: "Project 2", description: "Description 2", photo: "https://via.placeholder.com/150", link: "#"},
         {title: "Project 3", description: "Description 3", photo: "https://via.placeholder.com/150", link: "#"},
@@ -119,18 +119,24 @@
 
 
 <!--Projects-->
-<section id ="projects" class= "py-30 flex flex-col lg:flex-row items-center bg-gradient-br from-teal-400">
-    <h2 class="text=2xl font-bold text-indigo-700 text-center">Projects</h2>
-    <div class="mt-6 grid w-full max-w-6xl grid-cols-1 gap-6 px-6 md:grid-cols-2 lg:grid-cols-3"></div>
-    {#each Projects as project}
-    <div class = "rounded-lg border border-gray-300 bg-white p-4 text-center shadow-md">
-        <img src={project.photo} alt={project.title} class="mb-4 h-32 w-full rounded-md object-cover">
-        <h3 class = "mb-2 text-xl font-semibold text-indigo-700">{project.title}</h3>
-        <p class = "mb-4 text-sm text-gray-700">{project.description}</p>
-        <a href={project.link} target = "blank" class="text-indigo-500 hover:text-indigo-700">See Project</a>
-    </div>
-        
-    {/each}
+<section id="projects" class="flex w-full flex-col items-center bg-gray-100 py-20 text-white">
+	<h2 class="text-center text-2xl font-bold text-indigo-700">Projects</h2>
+	<div class="mt-6 grid w-full max-w-6xl grid-cols-1 gap-6 px-6 md:grid-cols-2 lg:grid-cols-3">
+		{#each projects as project}
+			<div class="rounded-lg border border-gray-300 bg-white p-4 text-center shadow-md">
+				<img
+					src={project.photo}
+					alt={project.title}
+					class="mb-4 h-32 w-full rounded-md object-cover"
+				/>
+				<h3 class="mb-2 text-xl font-semibold text-indigo-700">{project.title}</h3>
+				<p class="mb-4 text-sm text-gray-700">{project.description}</p>
+				<a href={project.link} target="_blank" class="text-indigo-500 hover:text-indigo-700"
+					>See project</a
+				>
+			</div>
+		{/each}
+	</div>
 </section>
 
 <!---Contact Form-->
